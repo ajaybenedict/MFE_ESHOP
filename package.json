@@ -1,0 +1,30 @@
+{
+  "name": "micro-frontend-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:main\" \"npm run start:product\" \"npm run start:order\" \"npm run start:delivery\" \"npm run start:microfrontend1\"  \"npm run start:microfrontend2\"",
+    "start:main": "cd ./main && npm start",
+    "start:product": "cd ./product && npm start",
+    "start:order": "cd ./order && npm start",
+    "start:delivery": "cd ./delivery && npm start",
+    "start:microfrontend1": "cd ./microfrontend1 && npm start",
+    "start:microfrontend2": "cd ./microfrontend2 && npm start",
+    "start:all": "yarn workspaces run start",
+    "cleanup": "yarn workspaces run cleanup"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ajay Benedict",
+    "email": "ajay.loyola@gmail.com"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.24.7"
+  }
+}
